@@ -1,18 +1,15 @@
 public class Piece {
 
     private Player owner;
-    private boolean inHome;
+    private String content;
 
-    public Piece(Player owner) {
+    public Piece(Player owner, String content) {
         this.owner = owner;
-        this.inHome = false;
+        this.content = content;
     }
 
-    public boolean inHome() {
-        return inHome;
+    String toString() {
+
     }
 
-    public void setInHome(boolean inHome) {
-        this.inHome = inHome;
-    }
 }

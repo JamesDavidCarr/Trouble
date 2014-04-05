@@ -10,10 +10,14 @@ public class Game {
 
     public boolean isOver() {
         for (Player player : players) {
-            if (player.isFinished()) {
+            if (board.isFinished(player)) {
                 return true;
             }
         }
         return false;
+    }
+
+    public void submit(int moves) {
+        board.submit(moves);
     }
 }

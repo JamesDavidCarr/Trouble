@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
@@ -5,9 +6,14 @@ import java.util.Scanner;
 public class Main {
 
     private static Random random;
+    HashMap<String, String> colourToANSI;
+
+    public Main() {
+        random = new Random();
+        colourToANSI = new HashMap<String, String>();
+    }
 
     public static void main(String[] args) {
-        random = new Random();
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many players?");
         int numPlayers = scanner.nextInt();
@@ -32,12 +38,14 @@ public class Main {
 
         while (!game.isOver()) {
             int moves = rollDice();
-            System.out.println(String.format("Player %d, your dice roll was %d", turn % numPlayers + 1, moves));
+            System.out.println(String.format("Player %d, your dice roll was %d", turn, moves));
+            game.submit(moves);
+            turn++;
         }
     }
 
     private static int rollDice() {
-        return (random.nextInt() % 6) + 1;
+        return random.nextInt(6) + 1;
     }
 
     private static HashSet<String> newColourList() {

@@ -6,18 +6,14 @@ public class Player {
 
     public Player(String colour) {
         this.colour = colour;
-        pieces = new Piece[NUMBER_OF_PIECES];
+        this.pieces = new Piece[NUMBER_OF_PIECES];
         for (int i = 0; i < pieces.length; i++) {
-            pieces[i] = new Piece(this);
+            pieces[i] = new Piece(this, Integer.toString(i+1));
         }
     }
 
-    public boolean isFinished() {
-        for (Piece piece : pieces) {
-            if (!piece.inHome()) {
-                return false;
-            }
-        }
-        return true;
+    Piece[] getPieces() {
+        return pieces;
     }
+
 }
