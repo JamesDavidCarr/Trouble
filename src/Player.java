@@ -6,7 +6,10 @@ public class Player {
 
     public Player(String colour) {
         this.colour = colour;
-        this.pieces = new Piece[NUMBER_OF_PIECES];
+        pieces = new Piece[NUMBER_OF_PIECES];
+        for (int i = 0; i < pieces.length; i++) {
+            pieces[i] = new Piece(this);
+        }
     }
 
     public boolean isFinished() {
