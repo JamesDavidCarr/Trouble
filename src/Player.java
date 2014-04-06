@@ -16,4 +16,8 @@ public class Player {
         return pieces;
     }
 
+    public String getColour() {
+        return colour;
+    }
+
 }

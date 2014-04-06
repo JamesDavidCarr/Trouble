@@ -4,7 +4,7 @@ public class Game {
     private Player[] players;
 
     public Game(int numPlayers, Player[] players) {
-        this.board = new Board();
+        this.board = new Board(players);
         this.players = players;
     }
 

@@ -1,2 +1,6 @@
 1: Print out board
 	1.1: Initialise board correctly
+
+2. Add enum for colour
+
+3. Figure out how pieces are going to work when they don't have owners
