@@ -8,8 +8,12 @@ public class Piece {
         this.content = content;
     }
 
-    String toString() {
+    public String toString() {
+        return content;
+    }
 
+    Player getOwner() {
+        return owner;
     }
 
 }

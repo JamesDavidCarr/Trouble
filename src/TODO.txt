@@ -1,0 +1,2 @@
+1: Print out board
+	1.1: Initialise board correctly
